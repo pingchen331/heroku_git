@@ -1,0 +1,14 @@
+version: '3'
+services:
+  aws_git_cli:
+    build: . 
+    #context: .
+    #dockerfile: dockerfile
+    container_name: cli
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./config/aws-cli/credentials:/root/.aws/credentials
+      - ./config/aws-cli/config:/root/.aws/config
+      - ./config/git/git-credentials:/root/.git-credentials
+      - ./config/git/gitconfig:/root/.gitconfig

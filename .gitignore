@@ -1,0 +1,7 @@
+#config
+#排除heroku使用者資訊
+config/heroku/netrc
+#排除github金鑰
+config/git/git*
+#排除LINE使用的secret_key
+secret_key
